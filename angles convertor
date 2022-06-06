@@ -1,0 +1,18 @@
+# author HARIN RAMJI
+print("1.convert radian to degrees")
+print("2.convert degrees to radians")
+pi = 3.141592653
+x = int(input("choose option"))
+
+if x == 1:
+    print("type the radian angle::")
+    b = float(input())
+    ans = b*(180.0/pi)
+    print("the degrees are : "+str(ans))
+elif x == 2:
+    print("type the degree angle::")
+    c = float(input())
+    ans = c / (180.0 / pi)
+    print("the degrees are : " + str(ans))
+else:
+    print("the option is not present please try again")
