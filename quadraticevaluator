@@ -1,0 +1,25 @@
+  import time
+start_time = time.time()
+
+
+def evalquadratic(a, b, c, x):
+    """
+    :param a: coefficient of x**2 
+    :param b: coefficient of x
+    :param c: coefficient of x**0
+    :param x: value of x in which the quadratic will be evaluated
+    :return: 
+    """
+    ans = a*(x**2) + (b*x) + c
+    return ans
+
+
+o = float(input("enter the coefficient of x**2"))
+p = float(input("enter the coefficient of x"))
+q = float(input("enter the coefficient of x**0 or the number without any x"))
+r = float(input("enter the value of x in which you want the quadratic equation to be evaluated at"))
+print("the answer will be " + str(evalquadratic(o, p, q, r)))
+end_time = time.time()
+time_taken = end_time-start_time
+print(str(time_taken) + "seconds")
+
