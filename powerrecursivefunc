@@ -1,0 +1,29 @@
+"""
+author HARIN HARISH
+this file shall contain a function that will compute an exponent equation with recursion without using**
+"""
+import time
+import tracemalloc
+tracemalloc.start()
+start_time = time.time()
+
+
+def recurpower(base, exp):
+    if exp <= 0:
+        return 1
+    else:
+        return base*recurpower(base, exp-1)
+
+
+x = float(input("enter the base of the exponent equation"))
+y = int(input("enter the exponent of the equation"))
+if y >= 0:
+    ans = recurpower(x, y)
+else:
+    print("exponent should be an integer greater than zero")
+print("the answer is " + str(ans))
+end_time = time.time()
+time_taken = end_time-start_time
+print("time taken for code to run is " + str(time_taken) + "milliseconds")
+print("malloc used is " + str(tracemalloc.get_traced_memory()))
+tracemalloc.stop()
