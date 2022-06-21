@@ -14,4 +14,4 @@ print("number of newton-raphson expressions is : " + str(numguesses))
 print("square root of " + str(y) + "is " + str(guess))
 end_time = time.time()
 time_taken = end_time-start_time
-print("the time taken for tis code is " + str(time_taken))
+print("the time taken for this code is " + str(time_taken) + "milliseconds")
