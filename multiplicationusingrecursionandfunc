@@ -21,4 +21,4 @@ ans=mult(x,y)
 print("the multiplication between " + str(x) + " and " + str(y) + " is " + str(ans))
 end_time=time.time()
 time_taken=end_time-start_time
-print("program takes " + str(time_taken) + "seconds")
+print("program takes " + str(time_taken) + "milliseconds")
