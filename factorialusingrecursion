@@ -1,0 +1,32 @@
+"""
+author HARIN HARISH
+finding factorial of positive number with recursion in a functions
+"""
+import time
+import tracemalloc
+tracemalloc.start()
+start_time=time.time()
+
+
+def fact(n):
+    if n == 1:
+        return 1
+    else:
+        return n*fact(n-1)
+
+
+x = int(input("enter a positive integer"))
+print(str(x) + "! is " + str(fact(x)))
+end_time = time.time()
+time_taken = end_time-start_time
+
+print("time taken for code to run is " + str(time_taken) + "milliseconds")
+
+
+print("malloc used is " + str(tracemalloc.get_traced_memory()))
+tracemalloc.stop()
+"""
+The output is given in form of (current, peak),
+i.e, current memory is the memory the code is currently using and peak 
+memory is the maximum space the program used while executing.
+"""
