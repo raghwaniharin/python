@@ -29,5 +29,15 @@ print("remove")
 #remove is a also  function which will find the value and remove it from the list
 list4.remove(1)
 print(list4)
+s = "hello world"
+w=list(s)
+print(w)
+
+print(s.split('l'))
+
+l=['h','e','l','l','o']
+r=''.join(l)
+print(r)
+
 
 
