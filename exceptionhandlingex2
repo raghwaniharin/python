@@ -1,0 +1,16 @@
+"""
+Author Harin Harish
+example 2 of exception handling wehre there are separate except clauses
+for particular types of exceptions
+"""
+try:
+    a=int(input("enter a number:"))
+    b=int(input("enter another number:"))
+    print("a/b= " , a/b)
+    print("a+b= " ,a+b)
+except ValueError:
+    print("invalid operands as arguments")
+except ZeroDivisionError:
+    print("cannot divide by zero")
+except:
+    print("something went wrong")
