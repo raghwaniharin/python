@@ -1,0 +1,12 @@
+"""
+Author Harin Harish
+example 1 is exception handling basis where we look at how basic exceptions are handled
+"""
+try:
+    a=int(input("enter a number:"))
+    b=int(input("enter another number"))
+    print(a/b)
+except:
+    print("bug in code")
+
+print("outside")
