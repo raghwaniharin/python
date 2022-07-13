@@ -11,6 +11,7 @@ except IOError:
     print("cannot open " , filename)
 else:
     for new in fh:
+
         if new!='\n':
             addit=new[:-1].split(',')
             data.append(addit)
@@ -18,3 +19,12 @@ finally:
     fh.close()
 
 print(data)
+gradesdata=[]
+if data:
+    for student in data:
+        try:
+            name=student[0:-1]
+            grades=int(student[-1])
+            gradesdata.append(name,grades)
+        except ValueError:
+            gradesdata.append([student[:],[]])
