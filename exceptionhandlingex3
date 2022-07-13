@@ -1,0 +1,20 @@
+"""
+Author Harin Harish
+example 3 of exception handling where we try to opena file and read contents of that particular file
+"""
+data=[]
+filename=input("enter a file name")
+
+try:
+    fh=open(filename,'r')
+except IOError:
+    print("cannot open " , filename)
+else:
+    for new in fh:
+        if new!='\n':
+            addit=new[:-1].split(',')
+            data.append(addit)
+finally:
+    fh.close()
+
+print(data)
